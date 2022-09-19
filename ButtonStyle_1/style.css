@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'IBMPlexSansKR-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 14px;
+}
+body {
+    background-color: #f4f4f4;
+}
+
+body * {
+    font-family: 'IBMPlexSansKR-Regular';
+}
+
+.container {
+    display: block;
+    width: 100%;
+    max-width: 30rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+}
+
+button {
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    margin-bottom: 7px;
+    padding: 0 5rem;
+    font-weight: 500;
+    letter-spacing: -2px;
+    font-size: 3rem;
+    text-align: left;
+    text-transform: capitalize;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 0 5px #f6f7f9;
+    box-shadow: 0 0 0 5px #f6f7f9;
+    width: 100%;
+    min-height: 116px;
+    -webkit-transition: opacity 0.15s, box-shadow 0.15s, color 0.25s, -webkit-box-shadow 0.15s;
+    transition: opacity 0.15s, box-shadow 0.15s, color 0.25s, -webkit-box-shadow 0.15s;
+}
+
+button span {
+    position: relative;
+    z-index: 2;
+}
+
+button:after {
+    position: absolute;
+    z-index: 0;
+    content: '';
+    top: -54px;
+    right: -10px;
+    border-radius: 149% 0 0 27px;
+    height: 200px;
+    width: 200px;
+    -webkit-transform-origin: right top;
+    transform-origin: right top;
+    -webkit-transform: rotate(-14deg);
+    transform: rotate(-14deg);
+    background: -webkit-linear-gradient(344deg, #e10eb7, #ffb100);
+    background: linear-gradient(106deg, #e10eb7, #ffb100);
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+}
+
+button:before {
+    position: absolute;
+    z-index: 1;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(https://i.esdrop.com/d/f/YYnCCNI1Zm/d4dG25Ya69.png) no-repeat;
+    background-position: calc(100% - 32px) 50%;
+    background-repeat: no-repeat;
+}
+
+button:hover,
+button:focus {
+    outline: none;
+    color: rgba(255, 255, 255, 0.98);
+    -webkit-box-shadow: 0 0 0 5px #f8eed8;
+    box-shadow: 0 0 0 5px #f8eed8;
+}
+
+button:hover::after,
+button:focus::after {
+    top: 0;
+    right: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: none;
+    transform: none;
+}
